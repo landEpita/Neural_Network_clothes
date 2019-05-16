@@ -22,8 +22,8 @@ Les commandes suivante s'addresse au utilisateur linux.
 
 #### Exemple
 
-`python main.py "test_set/tshirt_01.jpg"`
-`>> L'image est un T-shirt noir`
+`python main.py "test_set/tshirt_01.jpg"`  
+`>> L'image est un T-shirt noir`  
 
 ## Warning
 
