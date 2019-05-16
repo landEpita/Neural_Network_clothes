@@ -34,3 +34,7 @@ Les commandes suivante s'addresse au utilisateur linux.
 Le programme ne peut reconnaitre que les vetements sur fond blanc non porter.  
 Le dossier `test_set` contient des examples d'images valide.  
 **Internet** est **indispensable** pour lancer le program car l'ia va chercher le nom de la couleur par rapport au RGB sur internet.   
+
+## Exemple
+
+Les exemples de test_set sont trouvé sur ce site `https://www.lacoste.com/fr/lacoste/homme/vetements/t-shirts/`
