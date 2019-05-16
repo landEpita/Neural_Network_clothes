@@ -3,7 +3,7 @@
 Date: 2019-05-17
 
 ## Explication
-Ceci est un program qui a pour objectif de décrire un habit à partir d'une image.  
+Ceci est un program qui a pour objectif de décrire un vetement à partir d'une image.  
 Pour la réalisation de ce projet **Python**, je me suis servie Principalement des librairies Keras pour le réseau de neurone convolutif et CV2 pour le preprocessing.  
 
 Il est possible de lancer un entrainement du reseau de neurone(RN) avec la fonction `train()` de la classe network.  
