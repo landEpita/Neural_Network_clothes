@@ -160,7 +160,7 @@ def main_prepro(path):
     #draw_contours_find(l,img, (0,0,255))
     n = decoupe(gaus, l[0])
     color_img = decoupe(img, l[0])
-    open_im(color_img)
+    #open_im(color_img)
     
     color = cv2.resize(color_img,(1,1))
     color_name = ""
