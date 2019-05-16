@@ -3,8 +3,12 @@
 Date: 2019-05-17
 
 ## Explication
-Ceci est un program qui a pour objectif de décrire un habit à partir d'une image.
+Ceci est un program qui a pour objectif de décrire un habit à partir d'une image.  
 Pour la réalisation de ce projet **Python**, je me suis servie Principalement des librairies Keras pour le réseau de neurone convolutif et CV2 pour le preprocessing.  
+
+Il est possible de lancer un entrainement du reseau de neurone(RN) avec la fonction `train()` de la classe network.  
+Le Reseau reconnait a 84% les elements de l'image a condition que l'image soit propre.  
+Le fichier **json** représente le modèle du RN et le **. h4** représente ses poids. Ils sont tous les deux charger au lancement du program.  
 
 ## Initialisation
 
