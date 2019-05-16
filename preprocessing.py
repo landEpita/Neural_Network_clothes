@@ -135,6 +135,18 @@ def get_colour_name(requested_colour):
     return actual_name, closest_name
 
 
+def find_color(img):
+    pixels = np.float32(img.reshape(-1, 3))
+
+    n_colors = 5
+    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 200, .1)
+    flags = cv2.KMEANS_RANDOM_CENTERS
+
+    _, labels, palette = cv2.kmeans(pixels, n_colors, None, criteria, 10, flags)
+    _, counts = np.unique(labels, return_counts=True)
+    b, g ,r =palette[np.argmax(counts)]
+    return (r,g,b)
+
 def main_prepro(path):
     img = cv2.imread(path)
     #img = add_border(img)
@@ -148,10 +160,12 @@ def main_prepro(path):
     #draw_contours_find(l,img, (0,0,255))
     n = decoupe(gaus, l[0])
     color_img = decoupe(img, l[0])
+    open_im(color_img)
     
     color = cv2.resize(color_img,(1,1))
     color_name = ""
     rgb = (color[0][0][2],color[0][0][1],color[0][0][0])
+    #rgb = find_color(color_img)
     actual_name, closest_name = get_colour_name(rgb)
     if actual_name == None:
         color_name = closest_name
