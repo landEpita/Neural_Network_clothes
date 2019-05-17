@@ -14,8 +14,6 @@ def main():
     
     model = network()
     model.load_save("save_model.json","save.h5")
-    #m.train(image, target)
-    #model.save("save")
     if (len(sys.argv) == 2):
         elt, color, rgb = main_prepro(sys.argv[1])
         elt = np.array(elt)

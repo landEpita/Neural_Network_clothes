@@ -5,11 +5,10 @@ from preprocessing import *
 import random
 
 def training():
-    rd = random.randint(0,90000)
+    rd = random.randint(0,50000)
     print(rd)
     fashion_mnist = tf.keras.datasets.fashion_mnist
     (images, targets), (images_test, targets_test) = fashion_mnist.load_data()
-
     images = images[rd:rd+10000]
     targets = targets [rd:rd+10000]
 
@@ -82,5 +81,16 @@ class network:
         #print("Loaded model from disk")
 
 
+def main():
+    model = network()
+    model.load_save("save_model.json","save.h5")
+    while(True):
+        image, target = training()
+        image = image.reshape(image.shape[0], 28, 28, 1)
+
+        model.train(image, target)
+        model.save("save")
+
+#main()
 
 
